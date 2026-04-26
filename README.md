@@ -23,13 +23,7 @@ npm install
 npm run dev
 ```
 
-Frontend runs on `http://localhost:5173` and proxies `/api/*` to local backend `http://localhost:5000` in development.
 
-## Vercel Deployment (Single Project)
-
-1. Import this GitHub repository in Vercel.
-2. Keep project root as repository root.
-3. Deploy.
 
 This repo is configured with `vercel.json` to:
 - Build and serve `frontend` as a static Vite app.
@@ -42,6 +36,5 @@ Production API endpoints:
 
 Demo credentials:
 - `user@netflix.com / netflix123`
-- `test@test.com / test123`
-- `admin@netflix.com / admin123`
+
 
