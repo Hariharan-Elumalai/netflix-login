@@ -5,6 +5,7 @@ import "./Login.css";
 
 export default function Login() {
   const navigate = useNavigate();
+  const loginApiPath = import.meta.env.PROD ? "/_/backend/api/login" : "/api/login";
   const [form, setForm] = useState({ email: "", password: "" });
   const [errors, setErrors] = useState({});
   const [apiError, setApiError] = useState("");
@@ -43,7 +44,7 @@ export default function Login() {
     setLoading(true);
     setApiError("");
     try {
-      const res = await axios.post("/api/login", {
+      const res = await axios.post(loginApiPath, {
         email: form.email,
         password: form.password,
       });
